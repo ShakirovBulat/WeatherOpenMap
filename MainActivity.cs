@@ -30,7 +30,6 @@ namespace WeatherApp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
             cityNameEditText = (EditText)FindViewById(Resource.Id.cityNameText);
@@ -71,7 +70,6 @@ namespace WeatherApp
 
             ShowProgressDialogue("Fetching weather...");
 
-            // Asynchronous API call using HttpClient
             string url = apiBase + place + "&appid=" + apiKey + "&units=" + unit;
             var handler = new HttpClientHandler();
             HttpClient client = new HttpClient(handler);
@@ -92,7 +90,6 @@ namespace WeatherApp
             temperatureTextView.Text = temperature;
 
 
-            // Download Image using WebRequest
             string ImageUrl = "http://openweathermap.org/img/w/" + icon + ".png";
             System.Net.WebRequest request = default(System.Net.WebRequest);
             request = WebRequest.Create(ImageUrl);
