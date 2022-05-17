@@ -41,7 +41,7 @@ namespace WeatherApp
             getWeatherButton = (Button)FindViewById(Resource.Id.getWeatherButton);
 
             getWeatherButton.Click += GetWeatherButton_Click;
-            GetWeather("London");
+            GetWeather("Kazan");
         }
 
         private void GetWeatherButton_Click(object sender, System.EventArgs e)
